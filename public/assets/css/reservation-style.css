@@ -1,0 +1,29 @@
+.seat-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.seat {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    background-color: #d4edda;
+    transition: background-color 0.3s;
+}
+
+.seat-taken {
+    background-color: #f8d7da;
+    cursor: not-allowed;
+}
+
+.seat-selected {
+    background-color: #09c735;
+    color: white;
+}
+
+.abu {
+    background-color: rgb(199, 199, 199);
+
+}
