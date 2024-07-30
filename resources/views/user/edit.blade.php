@@ -28,12 +28,7 @@
                                             value="{{ $user['username'] }}" />
                                     </div>
 
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Password</label>
-                                        <input type="text" class="form-control" name="password" id=""
-                                            aria-describedby="helpId" placeholder="Password"
-                                            value="{{ $user['password'] }}" />
-                                    </div>
+
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                 </form>
 

@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
         $seats = [
 
-            ['seats_name' => 'A1', 'status' => 'Taken'],
+            ['seats_name' => 'A1', 'status' => 'Available'],
             ['seats_name' => 'A2', 'status' => 'Taken'],
 
         ];
