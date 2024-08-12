@@ -32,7 +32,7 @@
 
 </head>
 <script src="{{ asset('sweetalert2/package/dist/sweetalert2.all.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -107,8 +107,9 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-
+    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->
+
     <script src="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>

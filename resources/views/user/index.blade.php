@@ -47,5 +47,16 @@
             </div>
         </section>
     </div>
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                title: "",
+                text: "{{ session('success') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
+
+
 
 @endsection

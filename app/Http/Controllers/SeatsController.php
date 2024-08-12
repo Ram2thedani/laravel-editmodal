@@ -40,7 +40,7 @@ class SeatsController extends Controller
             'seats_name' => $request->seats_name,
             'status' => $request->status,
         ]);
-        return redirect('/seats');
+        return redirect('/seats')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
