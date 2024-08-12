@@ -30,8 +30,8 @@
                                                     <td>
                                                         <a href="/seats/edit/{{ $s['id'] }}"
                                                             class="btn btn-warning">Edit</a>
-                                                        <a href="/seats/hapus/{{ $s['id'] }}"
-                                                            class="btn btn-danger">Hapus</a>
+                                                        <a href="/seats/hapus/{{ $s['id'] }}" class="btn btn-danger"
+                                                            onclick="confirmDelete(event, '{{ $s['id'] }}')">Hapus</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -46,5 +46,31 @@
             </div>
         </section>
     </div>
+
+    <script>
+        function confirmDelete(event, id) {
+            event.preventDefault(); // Prevent the default link click behavior
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                    }).then(() => {
+                        // Navigate to the delete URL after the confirmation
+                        window.location.href = '/seats/hapus/' + id;
+                    });
+                }
+            });
+        }
+    </script>
 
 @endsection

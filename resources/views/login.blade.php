@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/css/adminlte.min.css') }}">
+    <link href="{{ asset('sweetalert2/package/dist/sweetalert2.min.css') }}" rel="stylesheet">
+
 </head>
+<script src="{{ asset('sweetalert2/package/dist/sweetalert2.all.min.js') }}"></script>
+<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
 
 <body class="hold-transition login-page">
     <div class="login-box">
@@ -52,13 +56,17 @@
                     </div>
                     <!-- /.col -->
             </div>
-            @if (session('gagal'))
-                <div class="alert alert-danger">
-                    {{ session('gagal') }}
-                </div>
-            @endif
-            </form>
 
+            </form>
+            @if (session('gagal'))
+                <script>
+                    Swal.fire({
+                        title: "Login Gagal",
+                        text: "{{ session('gagal') }}",
+                        icon: "error"
+                    });
+                </script>
+            @endif
 
         </div>
         <!-- /.login-card-body -->

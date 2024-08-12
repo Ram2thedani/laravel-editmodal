@@ -159,4 +159,13 @@
         </section>
 
     </div>
+    @if (session('sukses'))
+        <script>
+            Swal.fire({
+                title: "Login Berhasil",
+                text: "{{ session('sukses') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
 @endsection
