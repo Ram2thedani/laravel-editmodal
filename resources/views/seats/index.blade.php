@@ -29,7 +29,7 @@
                                                     <td>{{ $s['status'] }}</td>
                                                     <td>
                                                         <a href="/seats/edit/{{ $s['id'] }}"
-                                                            class="btn btn-warning">Edit</a>
+                                                            class="btn btn-warning">Edit<i class="fas fa-trash"></i></a>
                                                         <a href="/seats/hapus/{{ $s['id'] }}" class="btn btn-danger"
                                                             onclick="confirmDelete(event, '{{ $s['id'] }}')">Hapus</a>
                                                     </td>
